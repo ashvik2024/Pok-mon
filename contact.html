@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Pokémon Info</title>
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Navbar placeholder -->
+      <div id="navbar"></div>
+
+      <!-- Page content -->
+      <main class="content-container">
+        <h1>Contact Us</h1>
+        <ul>
+          <li><strong>Name:</strong> Vikas Kumar</li>
+          <li>
+            <strong>Email:</strong>
+            <a href="mailto:vk3261019@gmail.com">vk3261019@gmail.com</a>
+          </li>
+          <li>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/ashvik2024" target="_blank"
+              >github.com/vikas</a
+            >
+          </li>
+          <li>
+            <strong>Linkedin:</strong>
+            <a href="https://www.linkedin.com/in/vikas-kumar-7b11b9264/" target="_blank"
+              >linkedin.com/vikas</a
+            >
+          </li>
+        </ul>
+
+        <h2>Send a Message</h2>
+        <p>
+          If you have any questions, suggestions, or feedback, feel free to
+          reach out to me directly or use the form below.
+        </p>
+        <form
+          action="https://formspree.io/f/your_form_id"
+          method="POST"
+          class="contact-form"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message..."
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </main>
+      <!-- Footer container -->
+      <div id="footer"></div>
+    </div>
+
+    <!-- Load navbar -->
+    <script src="/js/nav.js"></script>
+  </body>
+</html>

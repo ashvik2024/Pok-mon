@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | PokéInfo</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Navbar placeholder -->
+      <div id="navbar"></div>
+
+      <!-- Main content -->
+      <main class="home-container">
+        <!-- Search Section -->
+        <section class="search-section">
+          <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Name or Number" />
+            <button class="search-btn" id="searchBtn">🔍</button>
+          </div>
+        </section>
+
+        <!-- Top Actions -->
+        <section class="top-actions">
+          <button class="surprise-btn">🔁 Surprise Me!</button>
+          <div class="sort-dropdown">
+            <label for="sort">Sort By</label>
+            <select id="sort">
+              <option>Lowest Number (First)</option>
+              <option>Highest Number (First)</option>
+              <option>Name (A-Z)</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Pokémon Grid -->
+        <section class="pokemon-grid" id="pokemonGrid">
+          <!-- Cards will be injected by JS -->
+        </section>
+      </main>
+
+      <!-- Footer placeholder -->
+      <div id="footer"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/nav.js" defer></script>
+    <script src="/js/script.js" defer></script>
+  </body>
+</html>

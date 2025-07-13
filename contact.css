@@ -1,0 +1,99 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+/* Page wrapper */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content container */
+.content-container {
+  max-width: 800px;
+  margin: 6px auto;
+  padding: 20px 24px 40px;
+  flex: 1;
+  line-height: 1.7;
+}
+
+/* Headings */
+.content-container h1,
+.content-container h2 {
+  color: #222;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Paragraphs and list */
+.content-container p {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+  line-height: 1.6;
+}
+.content-container ul {
+  margin: 10px 0 20px 20px;
+  line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fffbe6;
+  border-left: 6px solid #ffcb05;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 117, 190, 0.1);
+}
+
+/* Inputs and Textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Focus Effects */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0075be;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 117, 190, 0.2);
+}
+
+/* Submit Button */
+.contact-form button {
+  background-color: #0075be;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #005fa3;
+}

@@ -1,0 +1,144 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffcb05;
+  border-bottom: 2px solid #0075be;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px; /* Keep navbar compact */
+  overflow: visible;
+}
+
+.logo img {
+  height: 110px;
+  position: absolute;
+  top: -30px;    /* Adjust to visually center the image */
+  left: 0;
+  transition: transform 0.2s ease-in-out;
+  object-fit: contain;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.ham {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Nav Links - Desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #2a2a2a;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #0075be;
+}
+
+@media (max-width: 768px) {
+  .ham {
+    display: flex;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fffef5;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    /* padding: 10px 0; */
+    border-top: 2px solid #ffcb05;
+    border-bottom: 2px solid #ffcb05;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .nav-links.show-nav {
+    display: flex;
+        border-top: 2px solid #0075be;
+  }
+
+  .nav-links li {
+    text-align: center;
+    /* padding: 14px 0; */
+    /* border-top: 1px solid rgba(0, 117, 190, 0.2); */
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInItem 0.4s ease forwards;
+  }
+
+  .nav-links li:nth-child(1) { animation-delay: 0.1s; }
+  .nav-links li:nth-child(2) { animation-delay: 0.2s; }
+  .nav-links li:nth-child(3) { animation-delay: 0.3s; }
+  .nav-links li:nth-child(4) { animation-delay: 0.4s; }
+
+  .nav-links li a {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s, background 0.3s;
+    display: block;
+    padding: 8px 0;
+  }
+
+  .nav-links li:hover {
+    background-color: #ffcb05;
+    color: #0075be;
+  }
+}
+
+/* Slide entire menu down */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade and slide individual items */
+@keyframes fadeInItem {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
